@@ -1,0 +1,22 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo{
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.nav-items > ul{
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.nav-items > ul > li{
+  margin: 10px;
+}
