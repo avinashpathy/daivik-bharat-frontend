@@ -3,7 +3,6 @@ import "./ScriptureCard.css";
 import { Link } from "react-router-dom";
 
 const ScriptureCard = ({ scripture, onSelect }) => {
-  console.log("sc", scripture.path);
   return (
     <Link to={scripture.path} style={{ textDecoration: "none" }}>
       <div className="scripture-card" onClick={() => onSelect(scripture.path)}>

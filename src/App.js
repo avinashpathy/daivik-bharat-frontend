@@ -15,6 +15,8 @@ import MahaLakshmiAshtakam from "./components/scriptures/MahaLakshmiAshtakam.js"
 import "./App.css";
 import HanumanChalisa from "./components/scriptures/HanumanChalisa.js";
 import HanumanAshtakam from "./components/scriptures/HanumanAshtakam.js";
+import ShaktiPeetha from "./components/history/ShaktiPeethas.js";
+import LordJagannathStory from "./components/history/LordJagannathStory.js";
 
 function App() {
   return (
@@ -45,6 +47,11 @@ function App() {
         <Route
           path="scriptures/hanuman-ashtakam"
           element={<HanumanAshtakam />}
+        />
+        <Route path="history/shakti-peethas" element={<ShaktiPeetha />} />
+        <Route
+          path="history/lord-jagannath-story"
+          element={<LordJagannathStory />}
         />
       </Routes>
       <Footer />

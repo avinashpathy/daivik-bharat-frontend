@@ -9,7 +9,8 @@ const politicsTopics = [
     name: "Ram Mandir Pran Pratistha",
     image:
       "https://i0.wp.com/www.opindia.com/wp-content/uploads/2024/01/Add-a-heading_20240109_165717_0000.png?w=1280&ssl=1",
-    path: "constitution-preamble",
+    path: "ram-mandir",
+    link: "https://www.opindia.com/tag/ayodhya-ram-mandir-pran-pratishtha/",
   },
 ];
 
