@@ -11,7 +11,10 @@ import History from "./components/History.js";
 import Politics from "./components/Politics.js";
 import Books from "./components/Books.js";
 import TermsAndConditions from "./components/TermsAndConditions.js";
+import MahaLakshmiAshtakam from "./components/scriptures/MahaLakshmiAshtakam.js";
 import "./App.css";
+import HanumanChalisa from "./components/scriptures/HanumanChalisa.js";
+import HanumanAshtakam from "./components/scriptures/HanumanAshtakam.js";
 
 function App() {
   return (
@@ -34,6 +37,15 @@ function App() {
         <Route path="/politics" element={<Politics />} />
         <Route path="/books" element={<Books />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
+        <Route
+          path="scriptures/maha-laxmi-ashtakam"
+          element={<MahaLakshmiAshtakam />}
+        />
+        <Route path="scriptures/hanuman-chalisa" element={<HanumanChalisa />} />
+        <Route
+          path="scriptures/hanuman-ashtakam"
+          element={<HanumanAshtakam />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

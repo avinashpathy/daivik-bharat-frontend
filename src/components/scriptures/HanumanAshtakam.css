@@ -1,0 +1,62 @@
+.ashtakam-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .ashtakam-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .verse-section {
+    margin: 2rem 0;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .verse-content {
+    text-align: center;
+    line-height: 1.8;
+    white-space: pre-line;
+    margin-bottom: 0.5rem;
+  }
+  
+  .verse-number {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .phala-shruti {
+    margin-top: 3rem;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .conclusion {
+    margin-top: 2rem;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .ashtakam-container {
+      padding: 16px;
+    }
+    
+    .ashtakam-title {
+      font-size: 1.5rem;
+    }
+    
+    .verse-content {
+      font-size: 0.9rem;
+    }
+  }

@@ -1,0 +1,66 @@
+.chalisa-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chalisa-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .doha-section {
+    margin: 2rem 0;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .doha-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .doha-content {
+    line-height: 1.8;
+    white-space: pre-line;
+  }
+  
+  .chaupai-section {
+    margin: 2rem 0;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .chaupai-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .chaupai-content {
+    white-space: pre-line;
+    line-height: 2;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .chalisa-container {
+      padding: 16px;
+    }
+    
+    .chalisa-title {
+      font-size: 1.5rem;
+    }
+    
+    .chaupai-content {
+      font-size: 0.9rem;
+    }
+  }

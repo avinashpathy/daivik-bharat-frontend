@@ -1,0 +1,79 @@
+/* .shloka-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .shloka-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .shloka-speaker {
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .verses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .verse-container {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .verse-text {
+    text-align: center;
+    font-size: 1.1rem;
+    white-space: pre-line;
+    line-height: 1.6;
+  }
+  
+  .verse-number {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .phala-shruti {
+    margin-top: 3rem;
+  }
+  
+  .phala-shruti-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .conclusion {
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .shloka-container {
+      padding: 16px;
+    }
+    
+    .shloka-title {
+      font-size: 1.5rem;
+    }
+    
+    .verse-text {
+      font-size: 1rem;
+    }
+  } */

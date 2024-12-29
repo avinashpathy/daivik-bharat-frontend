@@ -1,0 +1,133 @@
+/* MahaLakshmiAshtakam.css */
+.ashtakam-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ashtakam-title {
+    text-align: center;
+    color: #ff9d5c;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Merriweather', serif;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ff9d5c;
+}
+
+.verses-container {
+    padding: 20px;
+    background: linear-gradient(to right, #fff9f4, #fff);
+    border-radius: 8px;
+}
+
+.speaker {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.verse {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.verse:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.verse p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #333;
+    margin: 0;
+}
+
+.phala-shruti {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px dashed #ff9d5c;
+}
+
+.phala-shruti .verse {
+    background-color: #fff9f4;
+}
+
+.conclusion {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ashtakam-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .ashtakam-title {
+        font-size: 2rem;
+    }
+
+    .verse p {
+        font-size: 1.2rem;
+    }
+
+    .speaker {
+        font-size: 1.1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .ashtakam-container {
+        box-shadow: none;
+    }
+
+    .verse:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Decoration elements */
+.verse::before {
+    content: '॥';
+    position: absolute;
+    left: -20px;
+    color: #ff9d5c;
+    opacity: 0.3;
+}
+
+.verse::after {
+    content: '॥';
+    position: absolute;
+    right: -20px;
+    color: #ff9d5c;
+    opacity: 0.3;
+}
+
+/* Sanskrit text enhancement */
+@font-face {
+    font-family: 'Sanskrit Text';
+    src: url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+}
+
+.verse p {
+    font-family: 'Sanskrit Text', 'Merriweather', serif;
+}
