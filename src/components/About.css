@@ -1,3 +1,4 @@
+/* About.css */
 .about-container {
     max-width: 800px;
     margin: 0 auto;
@@ -16,8 +17,176 @@
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s ease;
+    word-wrap: break-word;
 }
 
 .id2 a:hover {
     border-bottom-color: #4A4238;
+}
+
+/* Responsive styles for About page */
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 30px 15px;
+    }
+
+    .id2 {
+        font-size: 1rem;
+        text-align: left; /* Better readability on mobile */
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-container {
+        padding: 20px 12px;
+    }
+
+    .id2 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* Contact.css */
+.contact-page {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+/* Rest of your existing contact styles... */
+
+/* Enhanced responsive styles for Contact page */
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-page {
+        padding: 40px 12px;
+    }
+
+    .contact-header {
+        margin-bottom: 30px;
+    }
+
+    .contact-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-link {
+        padding: 15px;
+    }
+
+    .link-info h3 {
+        font-size: 1rem;
+    }
+
+    .link-info p {
+        font-size: 0.85rem;
+    }
+
+    .point {
+        padding: 15px;
+    }
+
+    .point i {
+        font-size: 24px;
+    }
+
+    .point h3 {
+        font-size: 1rem;
+    }
+
+    .point p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .contact-link {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-link i {
+        margin: 0 0 10px 0;
+    }
+
+    .link-info {
+        text-align: center;
+    }
+}
+
+/* Print styles for better printing */
+@media print {
+    .about-container,
+    .contact-page {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .id2,
+    .contact-link,
+    .point {
+        page-break-inside: avoid;
+    }
+
+    .contact-container {
+        display: block;
+    }
+
+    .contact-link i,
+    .point i {
+        display: none;
+    }
 }

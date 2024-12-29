@@ -2,39 +2,40 @@
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 400px;
+    max-width: 1200px; /* Maximum width for larger screens */
+    height: auto; /* Allow height to adjust based on content */
     margin: 0 auto;
     overflow: hidden;
-  }
-  
-  .carousel-inner {
+}
+
+.carousel-inner {
     display: flex;
-    height: 100%;
+    height: 100%; /* Maintain full height of the carousel */
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-slide {
-    flex: 0 0 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
     width: 100%;
-  }
-  
-  .carousel-slide img {
+}
+
+.carousel-slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .carousel-dots {
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Set a maximum height */
+    object-fit: cover; /* Cover to fill the space */
+}
+
+.carousel-dots {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 8px;
-  }
-  
-  .carousel-dot {
+}
+
+.carousel-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -42,8 +43,44 @@
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     padding: 0;
-  }
-  
-  .carousel-dot.active {
+}
+
+.carousel-dot.active {
     background-color: white;
-  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 90%; /* Reduce max-width for tablets */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .carousel-slide img {
+        max-height: 300px; /* Reduce max-height for smaller screens */
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .carousel {
+        max-width: 100%; /* Full width on mobile devices */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .carousel-slide img {
+        max-height: 200px; /* Further reduce max-height for mobile */
+    }
+
+    .carousel-dots {
+        bottom: 10px; /* Move dots closer to the bottom on mobile */
+        gap: 4px; /* Reduce gap between dots */
+    }
+
+    .carousel-dot {
+        width: 10px; /* Smaller dots on mobile */
+        height: 10px; 
+    }
+}
