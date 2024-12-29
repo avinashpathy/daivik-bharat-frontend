@@ -6,6 +6,8 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import About from "./components/About.js";
 import Contact from "./components/Contact";
+import Scriptures from "./components/Scriptures.js";
+import History from "./components/History.js";
 import "./App.css";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/scriptures" element={<Scriptures />} />
+        <Route path="/history" element={<History />} />
       </Routes>
       <Footer />
     </BrowserRouter>
