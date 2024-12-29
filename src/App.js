@@ -20,42 +20,47 @@ import LordJagannathStory from "./components/history/LordJagannathStory.js";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Carousel />
-              <Body />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/scriptures" element={<Scriptures />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/politics" element={<Politics />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/termsandconditions" element={<TermsAndConditions />} />
-        <Route
-          path="scriptures/maha-laxmi-ashtakam"
-          element={<MahaLakshmiAshtakam />}
-        />
-        <Route path="scriptures/hanuman-chalisa" element={<HanumanChalisa />} />
-        <Route
-          path="scriptures/hanuman-ashtakam"
-          element={<HanumanAshtakam />}
-        />
-        <Route path="history/shakti-peethas" element={<ShaktiPeetha />} />
-        <Route
-          path="history/lord-jagannath-story"
-          element={<LordJagannathStory />}
-        />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Carousel />
+                <Body />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/scriptures" element={<Scriptures />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/politics" element={<Politics />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/termsandconditions" element={<TermsAndConditions />} />
+          <Route
+            path="scriptures/maha-laxmi-ashtakam"
+            element={<MahaLakshmiAshtakam />}
+          />
+          <Route
+            path="scriptures/hanuman-chalisa"
+            element={<HanumanChalisa />}
+          />
+          <Route
+            path="scriptures/hanuman-ashtakam"
+            element={<HanumanAshtakam />}
+          />
+          <Route path="history/shakti-peethas" element={<ShaktiPeetha />} />
+          <Route
+            path="history/lord-jagannath-story"
+            element={<LordJagannathStory />}
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 
