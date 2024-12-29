@@ -1,0 +1,43 @@
+/* BodyCard.css */
+.body-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    max-width: 320px;
+    text-align: center;
+}
+
+.body-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: #ff9d5c;
+}
+
+.body-card-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.body-card:hover .body-card-image {
+    transform: scale(1.02);
+}
+
+.body-card p {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.body-card:hover p {
+    color: #ff9d5c;
+}
