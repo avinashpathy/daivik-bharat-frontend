@@ -1,65 +1,136 @@
-/* BodyCard.css */
+/* Body Card Styles */
 .body-card {
+    width: 300px;
+    height: 260px;
     border: 1px solid #ddd;
-    padding: 15px;
-    margin: 15px;
     border-radius: 8px;
+    padding: 16px;
+    margin: 20px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    max-width: 320px; /* Maximum width for larger screens */
-    text-align: center;
-    flex: 1 1 calc(33.333% - 30px); /* Responsive flex basis for three cards in a row */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-/* Hover effects */
-.body-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-color: #ff9d5c;
-}
-
+/* Image Styles */
 .body-card-image {
-    height: 200px;
     width: 100%;
+    height: 180px;
     object-fit: cover;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    margin-bottom: 16px;
 }
 
-.body-card:hover .body-card-image {
-    transform: scale(1.02);
-}
-
+/* Text Styles */
 .body-card p {
-    margin-top: 12px;
-    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
     color: #333;
     font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
     transition: color 0.3s ease;
+    width: 100%;
 }
 
-.body-card:hover p {
-    color: #ff9d5c;
-}
+/* Hover Effects */
+@media (hover: hover) {
+    .body-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-color: #ff9d5c;
+    }
 
-/* Media Queries for Responsiveness */
+    .body-card:hover .body-card-image {
+        transform: scale(1.02);
+    }
 
-/* For Tablets */
-@media (max-width: 768px) {
-    .body-card {
-        flex: 1 1 calc(50% - 30px); /* Two cards in a row on tablets */
-        max-width: none; /* Remove max-width to allow full width */
+    .body-card:hover p {
+        color: #ff9d5c;
     }
 }
 
-/* For Mobile Devices */
-@media (max-width: 480px) {
+/* Active States */
+.body-card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Extra Large to Large Screens (992px and up) */
+@media (min-width: 992px) {
     .body-card {
-        flex: 1 1 calc(100% - 30px); /* One card per row on mobile */
-        margin-left: auto; /* Center align the card */
-        margin-right: auto; /* Center align the card */
-        max-width: none; /* Remove max-width to allow full width */
+        width: 300px;
+        height: 260px;
+        padding: 15px;
+        margin: 15px;
+    }
+}
+
+/* Medium Screens (576px to 991px) */
+@media (min-width: 576px) and (max-width: 991px) {
+    .body-card {
+        width: 280px; /* Fixed width */
+        height: 260px; /* Fixed height */
+        margin: 0; /* Remove any margin */
+        flex: 0 0 280px; /* Prevent flex growth/shrink */
+        padding: 15px;
+        margin: 15px;
+    }
+    
+    .body-card-image {
+        height: 180px;
+    }
+}
+
+/* Small Screens (575px and below) */
+@media (max-width: 575px) {
+    .body-card {
+        width: 100%;
+        max-width: 300px;
+        height: 260px;
+        padding: 15px;
+        margin: 15px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .body-card,
+    .body-card-image,
+    .body-card p {
+        transition: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .body-card {
+        border: 2px solid #000;
+        box-shadow: none;
+    }
+
+    .body-card p {
+        color: #000;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .body-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    .body-card:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
