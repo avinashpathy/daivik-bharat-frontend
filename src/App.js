@@ -8,6 +8,9 @@ import About from "./components/About.js";
 import Contact from "./components/Contact";
 import Scriptures from "./components/Scriptures.js";
 import History from "./components/History.js";
+import Politics from "./components/Politics.js";
+import Books from "./components/Books.js";
+import TermsAndConditions from "./components/TermsAndConditions.js";
 import "./App.css";
 
 function App() {
@@ -28,6 +31,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/scriptures" element={<Scriptures />} />
         <Route path="/history" element={<History />} />
+        <Route path="/politics" element={<Politics />} />
+        <Route path="/books" element={<Books />} />
+        <Route path="/termsandconditions" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
     </BrowserRouter>

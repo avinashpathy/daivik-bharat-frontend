@@ -1,0 +1,112 @@
+/* TermsAndConditions.css */
+.terms-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 40px;
+}
+
+.terms-content {
+    line-height: 1.8;
+    color: #333;
+}
+
+.terms-main-title {
+    color: #ff9d5c;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ff9d5c;
+    font-family: 'Merriweather', serif;
+}
+
+.terms-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.terms-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.terms-section h2 {
+    color: #ff9d5c;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    border-left: 4px solid #ff9d5c;
+    padding-left: 15px;
+}
+
+.terms-section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.terms-intro {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.contact-email {
+    background-color: #fff9f4;
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contact-email a {
+    color: #ff9d5c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+    color: #ff7f2a;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .terms-main-title {
+        font-size: 2rem;
+    }
+
+    .terms-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .terms-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .terms-section:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
