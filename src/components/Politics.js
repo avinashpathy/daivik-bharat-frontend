@@ -23,7 +23,7 @@ const Politics = ({ onNavigate }) => {
 
   return (
     <div className="politics-container">
-      <h2 className="politics-title">Politics</h2>
+      <h2 className="politics-title">Events in Context</h2>
       <div className="politics-content">
         {politicsTopics.map((topic) => (
           <PoliticsCard

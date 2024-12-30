@@ -165,9 +165,30 @@
     }
 }
 
+@media (max-width: 576px) {
+    .mobile-menu-btn {
+        top: 20px; /* Adjust top position for smaller screens */
+        right: 15px; 
+    }
+
+    .mobile-menu-btn.active {
+        top: 20px; /* Adjust top position for smaller screens */
+        right: 15px; 
+        position: fixed;
+    }
+
+    .nav-items {
+        padding-top: 60px; /* Reduce top padding to prevent overlap */
+    }
+}
+
 @media (max-width: 480px) {
     .header {
         padding: 12px 15px;
+    }
+
+    .mobile-menu-btn {
+        top: 18px; /* Further adjust for even smaller screens */
     }
 
     .logo {

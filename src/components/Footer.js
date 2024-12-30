@@ -44,7 +44,7 @@ const Footer = () => {
             </a>{" "}
             and{" "}
             <a
-              href="https://linkedin.com/in/avinashpathy"
+              href="https://avinashpathy.github.io/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -73,14 +73,14 @@ const Contact = () => {
                 you'd like to learn about.
               </p>
             </div>
-            <div className="point">
+            {/* <div className="point">
               <i className="fa fa-users"></i>
               <h3>Join the Community</h3>
               <p>
                 Become part of our growing community of people passionate about
                 Indian heritage.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

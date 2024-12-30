@@ -11,7 +11,7 @@ const bodyList = [
   },
   {
     id: 2,
-    name: "Politics",
+    name: "Events in Context",
     image:
       "https://miro.medium.com/v2/resize:fit:1200/1*KJZ-B1RrJjhFWzD1vk6RxA.jpeg",
   },
