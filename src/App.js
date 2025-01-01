@@ -37,7 +37,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/scriptures" element={<Scriptures />} />
           <Route path="/history" element={<History />} />
-          <Route path="/politics" element={<Politics />} />
+          <Route path="/event-in-context" element={<Politics />} />
           <Route path="/books" element={<Books />} />
           <Route path="/termsandconditions" element={<TermsAndConditions />} />
           <Route
