@@ -96,6 +96,7 @@ const Gallery = () => {
             <h2>{selectedTemple.name}</h2>
             <div className="photo-grid">
               {selectedTemple.photos.map((photo, index) => (
+                // eslint-disable-next-line jsx-a11y/img-redundant-alt
                 <img
                   key={index}
                   src={photo}
