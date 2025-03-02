@@ -1,0 +1,173 @@
+.gallery-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .thumbnail-card {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .thumbnail-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .thumbnail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .thumbnail-title {
+    margin-top: 10px;
+  }
+  
+  .photo-viewer {
+    text-align: center;
+  }
+  
+  .back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:#ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Equal space between grid items */
+    margin-top: 20px;
+  }
+  
+  .photo-item {
+    width: 100%;
+    height: 300px; /* Set a consistent height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .photo-item {
+    width: 80%;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .photo-item:hover {
+    transform: scale(1.05);
+  } */
+  
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 90%; /* Limit the width for responsiveness */
+    max-height: 90%; /* Limit the height for responsiveness */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling inside the modal */
+  }
+  
+  .modal-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10;
+  }
+  
+  .close-button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .modal-content {
+      max-width: 95%; /* Slightly larger for tablets */
+      max-height: 95%;
+    }
+  
+    .close-button {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .close-button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .modal-content {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  
+  

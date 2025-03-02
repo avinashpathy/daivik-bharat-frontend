@@ -17,6 +17,7 @@ import HanumanChalisa from "./components/scriptures/HanumanChalisa.js";
 import HanumanAshtakam from "./components/scriptures/HanumanAshtakam.js";
 import ShaktiPeetha from "./components/history/ShaktiPeethas.js";
 import LordJagannathStory from "./components/history/LordJagannathStory.js";
+import Gallery from "./components/Gallery.js";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/scriptures" element={<Scriptures />} />
           <Route path="/history" element={<History />} />

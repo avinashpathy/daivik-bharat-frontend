@@ -8,12 +8,12 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.classList.toggle('menu-open');
+    document.body.classList.toggle("menu-open");
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
-    document.body.classList.remove('menu-open');
+    document.body.classList.remove("menu-open");
   };
 
   return (
@@ -24,9 +24,9 @@ const Header = () => {
           <h2>Daivik Bharat</h2>
         </Link>
       </div>
-      
-      <button 
-        className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
+
+      <button
+        className={`mobile-menu-btn ${isMenuOpen ? "active" : ""}`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
@@ -35,11 +35,28 @@ const Header = () => {
         <span></span>
       </button>
 
-      <nav className={`nav-items ${isMenuOpen ? 'active' : ''}`}>
+      <nav className={`nav-items ${isMenuOpen ? "active" : ""}`}>
         <ul>
-          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-          <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
-          <li><Link to="/contact" onClick={closeMenu}>Contact Us</Link></li>
+          <li>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/gallery" onClick={closeMenu}>
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={closeMenu}>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={closeMenu}>
+              Contact Us
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
