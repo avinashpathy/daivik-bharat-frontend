@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -18,8 +18,15 @@ import HanumanAshtakam from "./components/scriptures/HanumanAshtakam.js";
 import ShaktiPeetha from "./components/history/ShaktiPeethas.js";
 import LordJagannathStory from "./components/history/LordJagannathStory.js";
 import Gallery from "./components/Gallery.js";
+import { initGA, logPageView } from "../src/utils/analytics.js";
 
 function App() {
+  useEffect(() => {
+    // Initialize GA with your Measurement ID
+    initGA("G-0LH7TEDYQ7"); // Replace with your actual Measurement ID
+    logPageView();
+  }, []);
+
   return (
     <div className="app">
       <BrowserRouter>
