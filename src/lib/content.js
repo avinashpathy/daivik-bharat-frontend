@@ -38,16 +38,21 @@ marked.use({
 export const articles = Object.values(articleFiles)
   .map((raw) => {
     const { data, body } = parseFrontmatter(raw);
-    return { ...data, html: marked.parse(body), minutes: readingMinutes(body) };
+    const topics = String(data.topics || "").split(",").map((t) => t.trim()).filter(Boolean);
+    return { ...data, topics, html: marked.parse(body), minutes: readingMinutes(body) };
   })
   .sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
-export function articlesIn(section) {
-  return articles.filter((a) => a.section === section);
+export function articlesWithTopic(topic) {
+  return articles.filter((a) => a.topics.includes(topic));
 }
 
-export function findArticle(section, slug) {
-  return articles.find((a) => a.section === section && a.slug === slug);
+export function articlesWithFormat(format) {
+  return articles.filter((a) => a.format === format);
+}
+
+export function findArticle(slug) {
+  return articles.find((a) => a.slug === slug);
 }
 
 // Stotra bodies: "## Heading" starts a part, blank lines separate verses,

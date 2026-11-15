@@ -30,10 +30,10 @@ export default function Stotra() {
 
   return (
     <article className="stotra">
-      <Seo title={`${stotra.titleEn} (${stotra.title})`} description={stotra.summary} path={`/scriptures/${slug}`} />
+      <Seo title={`${stotra.titleEn} (${stotra.title})`} description={stotra.summary} path={`/texts/${slug}`} />
       <header className={`stotra__header tone-${stotra.tone}`}>
         <div className="wrap">
-          <Link className="back-link back-link--light" to="/scriptures">All stotras</Link>
+          <Link className="back-link back-link--light" to="/texts">All texts</Link>
           <h1 lang="hi">{stotra.title}</h1>
           <p className="stotra__en">{stotra.titleEn}</p>
           {stotra.attribution && <p className="stotra__attr">{stotra.attribution}</p>}

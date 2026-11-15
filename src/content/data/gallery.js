@@ -25,12 +25,3 @@ export const albums = [
     ],
   },
 ];
-
-export const events = [
-  {
-    title: "Ram Mandir Pran Pratishtha",
-    detail: "Coverage of the consecration of the Ram Mandir in Ayodhya, January 2024",
-    source: "OpIndia",
-    link: "https://www.opindia.com/tag/ayodhya-ram-mandir-pran-pratishtha/",
-  },
-];

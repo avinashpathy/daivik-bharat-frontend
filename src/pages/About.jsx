@@ -4,34 +4,37 @@ import { site } from "../content/data/site";
 export default function About() {
   return (
     <div className="wrap page">
-      <Seo title="About us" path="/about" description="Who runs Daivik Bharat and why." />
+      <Seo title="About us" path="/about" description="Who runs Daivik Bharat and how we work." />
       <header className="page-header">
         <h1>About us</h1>
         <p className="page-header__lede">
-          Welcome to Daivik Bharat, <span lang="hi">दैविक भारत</span>, the land of the Gods.
+          Most of us form opinions about India from headlines, WhatsApp forwards and arguments with family. We started Daivik Bharat to slow
+          that down: look at the sources first, hear each side out, and only then decide what we think.
         </p>
       </header>
       <div className="prose">
-        <p>
-          From the highest peaks of the Himalayas to the deepest trenches of the Indian Ocean, from the Rann of Kutch to the tea gardens of
-          Darjeeling, from the Phulkari of Punjab to the Kanjeevaram of Tamil Nadu, from chole bhature to rava dosa, what is astonishing about
-          Bharat is not its diversity, but the unity and strength it continues to show despite such vast differences.
-        </p>
-        <p>
-          Daivik Bharat started as a text conversation one evening between two college students who wanted to bring together people who share
-          their admiration for their motherland. Our aim is to bring to light what is hidden and to recall what has been forgotten.
-        </p>
         <h2>Who we are</h2>
         <p>
-          Srishti Tyagi and Avinash Pathy are engineering graduates with a keen interest in Indian history, politics and Sanatan Dharma. We are
-          not scholars. We are ordinary Indians learning as we go, and this site is where we share what we learn, with our sources, so you can
-          read along and check our work.
+          We're Srishti Tyagi and Avinash Pathy, engineering graduates who got curious about India's history, politics and traditions and
+          realised how little of what we "knew" we had ever checked. We aren't historians, economists or lawyers. We're ordinary Indians
+          learning as we go, and this site is our notebook, shared.
+        </p>
+        <p>
+          The name means "divine Bharat". We chose it when we started, out of affection for the country. It isn't a statement about which
+          India is the real one.
+        </p>
+        <h2>Who it's for</h2>
+        <p>
+          Anyone who wants to understand an issue before picking a side, and anyone who has already picked one but wants to understand the
+          people on the other side. If you mostly agree with us after reading, good. If you disagree but feel we were fair, even better.
         </p>
         <h2>How we work</h2>
         <ul>
-          <li>Every explainer lists the sources we used.</li>
-          <li>We keep what the sources say separate from what we think.</li>
-          <li>When we get something wrong, we correct it on the page.</li>
+          <li><strong>Sources first.</strong> Every claim links to the document, data or text it rests on.</li>
+          <li><strong>Every side in its own words.</strong> We describe each position the way its supporters would.</li>
+          <li><strong>Our view is labelled.</strong> When we give an opinion, we say so, and keep it apart from the facts.</li>
+          <li><strong>Public corrections.</strong> When we get something wrong, we fix it and note what changed.</li>
+          <li><strong>No topic is off limits.</strong> If it matters to how India lives and argues, it's fair game.</li>
         </ul>
         <p>
           Follow us on <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a> and{" "}

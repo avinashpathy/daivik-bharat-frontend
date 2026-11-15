@@ -6,51 +6,29 @@ export const site = {
   instagram: "https://www.instagram.com/daivikbharat",
   instagramHandle: "@daivikbharat",
   twitter: "https://twitter.com/daivikbharat",
+  tagline: "Read the sources first. Then make up your mind.",
   description:
-    "Two ordinary Indians learning about Bharat out loud: its scriptures, temples and history, and the questions that matter today. Sources shown for everything.",
+    "Explainers on India's history, polity, economy, culture and the debates around them. We lay out the sources and the arguments so you can form your own view.",
 };
 
-export const sections = [
-  {
-    path: "/explainers",
-    title: "Explainers",
-    glyph: "प्रश्न",
-    tone: "green",
-    blurb: "We pick something people talk about but rarely understand, read the sources, and show you what we found.",
-  },
-  {
-    path: "/scriptures",
-    title: "Stotras",
-    glyph: "स्तोत्र",
-    tone: "saffron",
-    blurb: "Stotras and chalisas to read and recite, set in clear Devanagari.",
-  },
-  {
-    path: "/history",
-    title: "Heritage",
-    glyph: "इतिहास",
-    tone: "maroon",
-    blurb: "Stories behind temples, pilgrimages and traditions.",
-  },
-  {
-    path: "/books",
-    title: "Books",
-    glyph: "ग्रंथ",
-    tone: "haldi",
-    blurb: "The texts we keep going back to, in editions we trust.",
-  },
-  {
-    path: "/gallery",
-    title: "Gallery",
-    glyph: "दर्शन",
-    tone: "green",
-    blurb: "Photos from temples we have visited.",
-  },
-  {
-    path: "/event-in-context",
-    title: "Events in context",
-    glyph: "संदर्भ",
-    tone: "maroon",
-    blurb: "Background reading on events that matter to Bharat.",
-  },
+// Topics are deliberately broad and open-ended. Add one here and tag articles with its slug.
+export const topics = [
+  { slug: "polity", name: "Polity and the Constitution", blurb: "How the state works: the Constitution, laws, courts, elections." },
+  { slug: "history", name: "History", blurb: "What happened, how we know, and why historians still disagree." },
+  { slug: "economy", name: "Economy and money", blurb: "Budgets, taxes, jobs, prices and what they mean for an ordinary household." },
+  { slug: "society", name: "Society", blurb: "Caste, language, gender, migration, education and how India lives together." },
+  { slug: "culture-faith", name: "Culture and faith", blurb: "Religions, festivals, texts and traditions across India, told as their followers tell them." },
+  { slug: "world", name: "India and the world", blurb: "Foreign policy, trade, borders and India's place in global debates." },
+  { slug: "science-tech", name: "Science and technology", blurb: "Space, digital public infrastructure, health and the science behind the headlines." },
+  { slug: "environment", name: "Environment", blurb: "Climate, water, air, forests and the trade-offs behind development." },
 ];
+
+export const formats = {
+  explainer: { name: "Explainer", plural: "Explainers", blurb: "A topic people argue about, broken down: what the sources say, how different sides see it, what's still unclear." },
+  "myth-check": { name: "Myth-check", plural: "Myth-checks", blurb: "A viral claim, checked against primary sources, with our working shown." },
+  story: { name: "Story", plural: "Stories", blurb: "Stories from India's traditions, told as the texts and the people who keep them tell them." },
+};
+
+export function topicBySlug(slug) {
+  return topics.find((t) => t.slug === slug);
+}

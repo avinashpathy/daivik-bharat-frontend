@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/logo-db.png";
+import Wordmark from "./Wordmark";
 
 const links = [
-  { to: "/explainers", label: "Explainers" },
-  { to: "/scriptures", label: "Stotras" },
-  { to: "/history", label: "Heritage" },
-  { to: "/books", label: "Books" },
-  { to: "/gallery", label: "Gallery" },
+  { to: "/read", label: "Read" },
+  { to: "/topics", label: "Topics" },
+  { to: "/texts", label: "Texts" },
+  { to: "/books", label: "Reading list" },
+  { to: "/gallery", label: "Photos" },
   { to: "/about", label: "About" },
 ];
 
@@ -20,18 +20,9 @@ export default function Header() {
     <header className="site-header">
       <div className="wrap site-header__inner">
         <Link to="/" className="brand" aria-label="Daivik Bharat home">
-          <img src={logo} alt="" width="36" height="36" />
-          <span className="brand__name">
-            <span lang="hi" className="brand__deva">दैविक भारत</span>
-            <span className="brand__latin">Daivik Bharat</span>
-          </span>
+          <Wordmark />
         </Link>
-        <button
-          className="menu-toggle"
-          aria-expanded={open}
-          aria-controls="site-nav"
-          onClick={() => setOpen((o) => !o)}
-        >
+        <button className="menu-toggle" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen((o) => !o)}>
           {open ? "Close" : "Menu"}
         </button>
         <nav id="site-nav" className={`site-nav ${open ? "is-open" : ""}`} aria-label="Main">

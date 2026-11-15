@@ -3,7 +3,7 @@ slug: maha-laxmi-ashtakam
 title: महा लक्ष्म्यष्टकम्
 titleEn: Maha Lakshmi Ashtakam
 deity: लक्ष्मी
-tone: haldi
+tone: stone
 summary: Eight verses in praise of Goddess Mahalakshmi, spoken by Indra, with the phala shruti that follows.
 ---
 ## इंद्र उवाच

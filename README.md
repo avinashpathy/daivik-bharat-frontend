@@ -18,29 +18,30 @@ All content lives in `src/content/`. You don't need to touch any React code to p
 
 | What | Where | Shows up at |
 | --- | --- | --- |
-| Explainer or myth-check | `src/content/articles/*.md` with `section: explainers` (set `kind: Myth-check` for myth-checks) | `/explainers/<slug>` |
-| Heritage story | `src/content/articles/*.md` with `section: history` | `/history/<slug>` |
-| Stotra | `src/content/stotras/*.md` | `/scriptures/<slug>` |
-| Books, gallery, events | `src/content/data/*.js` | `/books`, `/gallery`, `/event-in-context` |
+| Explainer, myth-check or story | `src/content/articles/*.md` | `/read/<slug>`, and under each of its topics |
+| Primary text (stotra, document) | `src/content/stotras/*.md` | `/texts/<slug>` |
+| Topics | `src/content/data/site.js` | `/topics/<slug>` |
+| Reading list, photos | `src/content/data/*.js` | `/books`, `/gallery` |
 
 An article starts with frontmatter:
 
 ```md
 ---
 slug: my-topic
-section: explainers
-kind: Explainer
-title: We tried to understand my topic
-glyph: प्रश्न        # Devanagari word for the cover
-tone: green          # maroon | saffron | green | haldi
+format: explainer        # explainer | myth-check | story
+topics: polity, economy  # any slugs from src/content/data/site.js
+title: A plain question people actually ask
+glyph: प्रश्न            # word for the cover
+tone: indigo             # indigo | slate | sky | stone
 date: 2026-11-20
-featured: true       # optional: shows it first on the home page
+featured: true           # optional: shows it first on the home page
 summary: One or two sentences.
 ---
 ```
 
-Then write normal Markdown, and end with a `## Sources` list.
+Explainers follow the same four parts, as `##` headings: **The question**, **What the sources say**, **How people see it today**,
+**What's still unclear**, then **Sources**. Describe each side the way its own supporters would.
 
-Stotras use `## Heading` for parts (दोहा, चौपाई…), a blank line between verses, and `! text` for the closing line.
+Texts use `## Heading` for parts (दोहा, चौपाई…), a blank line between verses, and `! text` for the closing line.
 
 `npm run build` also regenerates `public/sitemap.xml` from the content.

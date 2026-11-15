@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
-import Toran from "../components/Toran";
 import Cover from "../components/Cover";
-import { site, sections } from "../content/data/site";
-import { articles, stotras } from "../lib/content";
-import { images } from "../content/data/gallery";
+import { ArticleMeta } from "../components/ArticleList";
+import { site, topics } from "../content/data/site";
+import { articles, articlesWithTopic } from "../lib/content";
 
-const sectionBase = { explainers: "/explainers", history: "/history" };
+const anatomy = [
+  { part: "The question", text: "What people are arguing about, in one plain question." },
+  { part: "What the sources say", text: "The documents, data and texts, quoted and linked." },
+  { part: "How people see it", text: "The main positions, each put the way its own supporters would put it." },
+  { part: "What's still unclear", text: "Where the record runs out and opinion begins." },
+];
 
 export default function Home() {
   const featured = articles.find((a) => a.featured) || articles[0];
@@ -16,104 +20,98 @@ export default function Home() {
     <>
       <Seo path="/" />
       <section className="hero">
-        <Toran />
         <div className="wrap hero__grid">
           <div className="hero__text">
-            <h1 className="hero__title">
-              <span lang="hi" className="hero__deva">दैविक भारत</span>
-              <span className="hero__latin">Learning about Bharat, out loud.</span>
-            </h1>
+            <h1 className="hero__title">{site.tagline}</h1>
             <p className="hero__lede">
-              We are two ordinary Indians, not scholars. We read about Bharat's scriptures, temples and history, and the questions that matter
-              today, then share what we found, with the sources, so you can check it yourself.
+              Daivik Bharat explains the things Indians argue about, from the Constitution and the economy to history and faith. We aren't
+              experts and we don't tell you what to think. We gather the sources, lay out the different sides fairly, and leave the conclusion
+              to you.
             </p>
             <div className="hero__actions">
-              <Link className="button button--light" to={`${sectionBase[featured.section]}/${featured.slug}`}>
-                Read our latest explainer
-              </Link>
-              <a className="button button--ghost" href={site.instagram} target="_blank" rel="noopener noreferrer">
-                Follow on Instagram
-              </a>
+              <Link className="button" to={`/read/${featured.slug}`}>Read the latest explainer</Link>
+              <Link className="button button--quiet" to="/topics">Browse topics</Link>
             </div>
           </div>
-          <figure className="hero__photo">
-            <img src={images["puri-2"]} alt="The shikhara of Shri Jagannath Temple, Puri, under a cloudy sky" />
-            <figcaption>Shri Jagannath Temple, Puri. Our photo.</figcaption>
-          </figure>
+          <aside className="anatomy" aria-labelledby="anatomy-heading">
+            <h2 id="anatomy-heading" className="anatomy__title">How every explainer is built</h2>
+            <ol className="anatomy__list">
+              {anatomy.map((a) => (
+                <li key={a.part}>
+                  <span className="anatomy__part">{a.part}</span>
+                  <span className="anatomy__text">{a.text}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="anatomy__foot">Then a full list of sources, so you can check every claim yourself.</p>
+          </aside>
         </div>
       </section>
 
       <section className="wrap home-latest" aria-labelledby="latest-heading">
         <h2 id="latest-heading" className="section-heading">Latest</h2>
         <div className="home-latest__grid">
-          <Link to={`${sectionBase[featured.section]}/${featured.slug}`} className="feature">
+          <Link to={`/read/${featured.slug}`} className="feature">
             <Cover glyph={featured.glyph} tone={featured.tone} size="lg" />
-            <p className="article-row__kind">{featured.kind}</p>
             <h3 className="feature__title">{featured.title}</h3>
             <p>{featured.summary}</p>
+            <ArticleMeta article={featured} />
           </Link>
           <ul className="home-latest__list">
             {recent.map((a) => (
               <li key={a.slug}>
-                <Link to={`${sectionBase[a.section]}/${a.slug}`}>
-                  <p className="article-row__kind">{a.kind}</p>
+                <Link to={`/read/${a.slug}`}>
                   <h3>{a.title}</h3>
-                  <p className="meta">{a.minutes} min read</p>
+                  <ArticleMeta article={a} />
                 </Link>
               </li>
             ))}
-            {stotras.slice(0, 1).map((s) => (
-              <li key={s.slug}>
-                <Link to={`/scriptures/${s.slug}`}>
-                  <p className="article-row__kind">Stotra</p>
-                  <h3>
-                    <span lang="hi" className="deva-inline">{s.title}</span> {s.titleEn}
-                  </h3>
-                  <p className="meta">Read and recite</p>
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link to="/read" className="home-latest__all">See everything we've written</Link>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section className="home-sections" aria-labelledby="sections-heading">
+      <section className="home-topics" aria-labelledby="topics-heading">
         <div className="wrap">
-          <h2 id="sections-heading" className="section-heading">What you'll find here</h2>
-          <ul className="section-index">
-            {sections.map((s) => (
-              <li key={s.path}>
-                <Link to={s.path}>
-                  <span lang="hi" className={`section-index__glyph text-${s.tone}`}>{s.glyph}</span>
-                  <span className="section-index__body">
-                    <span className="section-index__title">{s.title}</span>
-                    <span className="section-index__blurb">{s.blurb}</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
+          <h2 id="topics-heading" className="section-heading">Topics</h2>
+          <p className="section-lede">No topic is off limits. These are where we've started, and the list grows with your questions.</p>
+          <ul className="topic-grid">
+            {topics.map((t) => {
+              const count = articlesWithTopic(t.slug).length;
+              return (
+                <li key={t.slug}>
+                  <Link to={`/topics/${t.slug}`} className={count ? "" : "is-empty"}>
+                    <span className="topic-grid__name">{t.name}</span>
+                    <span className="topic-grid__blurb">{t.blurb}</span>
+                    <span className="topic-grid__count">{count ? `${count} ${count === 1 ? "article" : "articles"}` : "Nothing yet. Ask us a question."}</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
 
       <section className="wrap principles" aria-labelledby="principles-heading">
-        <h2 id="principles-heading" className="section-heading">How we work</h2>
+        <h2 id="principles-heading" className="section-heading">Our ground rules</h2>
         <div className="principles__grid">
           <div>
-            <h3>We show our sources</h3>
-            <p>Every explainer ends with the texts, documents and books we read, linked wherever we can.</p>
+            <h3>Sources before opinions</h3>
+            <p>Every claim links to where it came from: the document, the data, the text.</p>
           </div>
           <div>
-            <h3>Facts and opinions stay apart</h3>
-            <p>We mark what the sources say separately from what we think, so you can disagree with one and still use the other.</p>
+            <h3>Every side in its own words</h3>
+            <p>We describe each position the way the people who hold it would, not the way their opponents do.</p>
           </div>
           <div>
-            <h3>We fix mistakes in public</h3>
-            <p>When we get something wrong, we correct the page and say what changed.</p>
+            <h3>Our view is labelled</h3>
+            <p>When we do say what we think, it's marked as ours and kept apart from the facts.</p>
           </div>
           <div>
-            <h3>You choose what's next</h3>
-            <p>Many topics start as a question from a follower. Send us one.</p>
+            <h3>Corrections in public</h3>
+            <p>When we get something wrong, we fix the page and say what changed.</p>
           </div>
         </div>
       </section>
@@ -121,14 +119,12 @@ export default function Home() {
       <section className="invite">
         <div className="wrap invite__inner">
           <div>
-            <h2>Something you've always wondered about Bharat?</h2>
-            <p>Send us a topic or a claim you'd like checked. We read every message.</p>
+            <h2>What do you want explained?</h2>
+            <p>Send us a topic, a headline you didn't follow, or a claim you'd like checked.</p>
           </div>
           <div className="invite__actions">
-            <a className="button button--light" href={`mailto:${site.email}?subject=Topic suggestion`}>Suggest a topic</a>
-            <a className="button button--ghost" href={site.instagram} target="_blank" rel="noopener noreferrer">
-              Message us on Instagram
-            </a>
+            <a className="button button--on-dark" href={`mailto:${site.email}?subject=Topic suggestion`}>Suggest a topic</a>
+            <a className="button button--ghost" href={site.instagram} target="_blank" rel="noopener noreferrer">Message us on Instagram</a>
           </div>
         </div>
       </section>
