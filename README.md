@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Daivik Bharat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website for [Daivik Bharat](https://www.daivikbharat.in): learning about Bharat, out loud.
 
-## Available Scripts
+Built with Vite and React, hosted on Firebase. Pushing to `master` deploys automatically through GitHub Actions.
 
-In the project directory, you can run:
+## Run it locally
 
-### `npm start`
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build in build/
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Adding content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+All content lives in `src/content/`. You don't need to touch any React code to publish.
 
-### `npm test`
+| What | Where | Shows up at |
+| --- | --- | --- |
+| Explainer or myth-check | `src/content/articles/*.md` with `section: explainers` (set `kind: Myth-check` for myth-checks) | `/explainers/<slug>` |
+| Heritage story | `src/content/articles/*.md` with `section: history` | `/history/<slug>` |
+| Stotra | `src/content/stotras/*.md` | `/scriptures/<slug>` |
+| Books, gallery, events | `src/content/data/*.js` | `/books`, `/gallery`, `/event-in-context` |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+An article starts with frontmatter:
 
-### `npm run build`
+```md
+---
+slug: my-topic
+section: explainers
+kind: Explainer
+title: We tried to understand my topic
+glyph: प्रश्न        # Devanagari word for the cover
+tone: green          # maroon | saffron | green | haldi
+date: 2026-11-20
+featured: true       # optional: shows it first on the home page
+summary: One or two sentences.
+---
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then write normal Markdown, and end with a `## Sources` list.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Stotras use `## Heading` for parts (दोहा, चौपाई…), a blank line between verses, and `! text` for the closing line.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm run build` also regenerates `public/sitemap.xml` from the content.
