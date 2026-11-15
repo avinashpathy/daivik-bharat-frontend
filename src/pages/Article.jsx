@@ -5,7 +5,7 @@ import NotFound from "./NotFound";
 import { findArticle } from "../lib/content";
 import { images } from "../content/data/gallery";
 import { formatDate } from "../components/ArticleList";
-import { site, formats, topicBySlug } from "../content/data/site";
+import { site, formats, topicBySlug, toneFor } from "../content/data/site";
 
 export default function Article() {
   const { slug } = useParams();
@@ -23,7 +23,7 @@ export default function Article() {
         <ul className="tag-list" aria-label="Topics">
           {article.topics.map((t) => (
             <li key={t}>
-              <Link to={`/topics/${t}`}>{topicBySlug(t)?.name}</Link>
+              <Link to={`/topics/${t}`} className={`tag tag--${topicBySlug(t)?.tone}`}>{topicBySlug(t)?.name}</Link>
             </li>
           ))}
         </ul>
@@ -38,7 +38,7 @@ export default function Article() {
         </figure>
       ) : (
         <div className="wrap article__figure">
-          <Cover glyph={article.glyph} tone={article.tone} size="banner" />
+          <Cover glyph={article.glyph} tone={toneFor(article)} size="banner" />
         </div>
       )}
       <div className="wrap">

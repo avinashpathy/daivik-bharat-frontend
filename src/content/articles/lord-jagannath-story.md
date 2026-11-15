@@ -1,10 +1,9 @@
 ---
 slug: lord-jagannath-story
 format: story
-topics: culture-faith
+topics: spiritual, culture
 title: The story of Lord Jagannath
 glyph: जगन्नाथ
-tone: indigo
 image: puri-2
 imageCaption: Shri Jagannath Temple, Puri. Photo by Daivik Bharat.
 date: 2025-01-05

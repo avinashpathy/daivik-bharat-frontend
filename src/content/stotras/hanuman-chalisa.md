@@ -3,7 +3,7 @@ slug: hanuman-chalisa
 title: श्री हनुमान चालीसा
 titleEn: Shri Hanuman Chalisa
 deity: हनुमान
-tone: indigo
+tone: navy
 attribution: Goswami Tulsidas
 summary: Forty chaupais in Awadhi by Goswami Tulsidas in praise of Shri Hanuman, framed by opening and closing dohas.
 ---

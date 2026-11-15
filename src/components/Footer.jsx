@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="wrap site-footer__inner">
         <div className="site-footer__brand">
-          <Wordmark light />
+          <Wordmark />
           <p>{site.tagline}</p>
         </div>
         <nav className="site-footer__links" aria-label="Follow and contact">

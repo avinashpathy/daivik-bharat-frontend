@@ -1,10 +1,9 @@
 ---
 slug: india-that-is-bharat
 format: explainer
-topics: polity, history
+topics: history, polity
 title: "India or Bharat? Where the two names come from, and why it became a debate"
 glyph: भारत
-tone: indigo
 date: 2026-11-15
 featured: true
 summary: The Constitution uses both names. We read the Constitution, the old texts and the 1949 debate, and looked at why the question flared up again in 2023.

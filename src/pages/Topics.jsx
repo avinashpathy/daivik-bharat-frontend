@@ -11,17 +11,17 @@ export function TopicIndex() {
       <Seo title="Topics" path="/topics" />
       <header className="page-header">
         <h1>Topics</h1>
-        <p className="page-header__lede">No subject is off limits. If something about India puzzles you, it belongs here. These are the areas we've started with.</p>
+        <p className="page-header__lede">Five pillars, and room for anything else about India that puzzles you. If a topic isn't here yet, ask us.</p>
       </header>
-      <ul className="topic-grid topic-grid--page">
+      <ul className="pillar-grid">
         {topics.map((t) => {
           const count = articlesWithTopic(t.slug).length;
           return (
             <li key={t.slug}>
-              <Link to={`/topics/${t.slug}`} className={count ? "" : "is-empty"}>
-                <span className="topic-grid__name">{t.name}</span>
-                <span className="topic-grid__blurb">{t.blurb}</span>
-                <span className="topic-grid__count">{count ? `${count} ${count === 1 ? "article" : "articles"}` : "Nothing yet. Ask us a question."}</span>
+              <Link to={`/topics/${t.slug}`} className={`pillar pillar--${t.tone}`}>
+                <span className="pillar__name">{t.name}</span>
+                <span className="pillar__blurb">{t.blurb}</span>
+                <span className="pillar__count">{count ? `${count} ${count === 1 ? "story" : "stories"}` : "Coming soon"}</span>
               </Link>
             </li>
           );
@@ -40,7 +40,7 @@ export function Topic() {
   return (
     <div className="wrap page">
       <Seo title={topic.name} path={`/topics/${slug}`} description={topic.blurb} />
-      <header className="page-header">
+      <header className={`page-header topic-header topic-header--${topic.tone}`}>
         <Link className="back-link" to="/topics">All topics</Link>
         <h1>{topic.name}</h1>
         <p className="page-header__lede">{topic.blurb}</p>

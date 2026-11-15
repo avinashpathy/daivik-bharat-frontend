@@ -6,21 +6,29 @@ export const site = {
   instagram: "https://www.instagram.com/daivikbharat",
   instagramHandle: "@daivikbharat",
   twitter: "https://twitter.com/daivikbharat",
-  tagline: "Read the sources first. Then make up your mind.",
+  tagline: "Discover Bharat, one story at a time.",
   description:
-    "Explainers on India's history, polity, economy, culture and the debates around them. We lay out the sources and the arguments so you can form your own view.",
+    "A research-led platform of stories and explainers on India's history, spiritual heritage, geography, living traditions and place in the world. Sources shown, so you can make up your own mind.",
 };
 
-// Topics are deliberately broad and open-ended. Add one here and tag articles with its slug.
+// The five content pillars from the brand strategy, plus open topics. No subject is off limits:
+// add a topic here and tag articles with its slug.
 export const topics = [
-  { slug: "polity", name: "Polity and the Constitution", blurb: "How the state works: the Constitution, laws, courts, elections." },
-  { slug: "history", name: "History", blurb: "What happened, how we know, and why historians still disagree." },
-  { slug: "economy", name: "Economy and money", blurb: "Budgets, taxes, jobs, prices and what they mean for an ordinary household." },
-  { slug: "society", name: "Society", blurb: "Caste, language, gender, migration, education and how India lives together." },
-  { slug: "culture-faith", name: "Culture and faith", blurb: "Religions, festivals, texts and traditions across India, told as their followers tell them." },
-  { slug: "world", name: "India and the world", blurb: "Foreign policy, trade, borders and India's place in global debates." },
-  { slug: "science-tech", name: "Science and technology", blurb: "Space, digital public infrastructure, health and the science behind the headlines." },
-  { slug: "environment", name: "Environment", blurb: "Climate, water, air, forests and the trade-offs behind development." },
+  { slug: "history", pillar: true, tone: "gold", name: "History and civilisation", blurb: "Dynasties, archaeology, trade routes, architecture and the knowledge systems that shaped India." },
+  { slug: "spiritual", pillar: true, tone: "plum", name: "Sanatan Dharma and spiritual heritage", blurb: "Philosophy, scriptures, temples, pilgrimages and festivals, with belief and historical record kept clearly apart." },
+  { slug: "geography", pillar: true, tone: "forest", name: "Geography and natural heritage", blurb: "Rivers, mountains, forests and how the land has shaped the people who live on it." },
+  { slug: "culture", pillar: true, tone: "peacock", name: "Culture, communities and living traditions", blurb: "Languages, food, crafts, music and the many ways different regions celebrate." },
+  { slug: "geopolitics", pillar: true, tone: "navy", name: "Geopolitics and strategic Bharat", blurb: "Diplomacy, trade corridors, the Indian Ocean and India's place in world affairs." },
+  { slug: "polity", tone: "slate", name: "Polity and the Constitution", blurb: "How the state works: the Constitution, laws, courts and elections." },
+  { slug: "economy", tone: "slate", name: "Economy and money", blurb: "Budgets, taxes, jobs and prices, explained for an ordinary household." },
+  { slug: "science-tech", tone: "slate", name: "Science and technology", blurb: "Space, digital public infrastructure and the science behind the headlines." },
+];
+
+// Planned Instagram and website series from the content strategy.
+export const series = [
+  { title: "भारत की नदियाँ", subtitle: "Bharat ki nadiyan", topic: "geography", blurb: "India's rivers, one at a time, and the beliefs and stories that have grown up along their banks." },
+  { title: "विविध भारत", subtitle: "Vividh Bharat", topic: "culture", blurb: "The diversity of India's food, languages and customs: where they come from and how they differ from region to region." },
+  { title: "भू-राजनीति", subtitle: "Bhu-rajniti", topic: "geopolitics", blurb: "Maps, sea lanes and borders: the geography behind India's strategic choices." },
 ];
 
 export const formats = {
@@ -31,4 +39,8 @@ export const formats = {
 
 export function topicBySlug(slug) {
   return topics.find((t) => t.slug === slug);
+}
+
+export function toneFor(article) {
+  return topicBySlug(article.topics?.[0])?.tone || "navy";
 }

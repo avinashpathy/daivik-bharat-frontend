@@ -1,10 +1,9 @@
 ---
 slug: shakti-peethas
 format: story
-topics: culture-faith
+topics: spiritual
 title: The Shakti Peethas
 glyph: शक्ति
-tone: slate
 date: 2025-01-05
 summary: The Puranic story behind 51 sites revered in Shakta tradition as seats of the Goddess, and where the major ones are today.
 ---

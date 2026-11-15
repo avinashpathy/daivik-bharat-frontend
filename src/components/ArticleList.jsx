@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Cover from "./Cover";
 import { images } from "../content/data/gallery";
-import { formats, topicBySlug } from "../content/data/site";
+import { formats, topicBySlug, toneFor } from "../content/data/site";
 
 export function formatDate(date) {
   return new Date(date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
@@ -21,7 +21,7 @@ export default function ArticleList({ items }) {
       {items.map((a) => (
         <li key={a.slug}>
           <Link to={`/read/${a.slug}`} className="article-row">
-            <Cover glyph={a.glyph} tone={a.tone} image={images[a.image]} size="sm" />
+            <Cover glyph={a.glyph} tone={toneFor(a)} image={images[a.image]} size="sm" />
             <div>
               <h3>{a.title}</h3>
               <p className="article-row__summary">{a.summary}</p>

@@ -29,10 +29,9 @@ An article starts with frontmatter:
 ---
 slug: my-topic
 format: explainer        # explainer | myth-check | story
-topics: polity, economy  # any slugs from src/content/data/site.js
+topics: history, geography  # slugs from src/content/data/site.js; the first sets the colour
 title: A plain question people actually ask
 glyph: प्रश्न            # word for the cover
-tone: indigo             # indigo | slate | sky | stone
 date: 2026-11-20
 featured: true           # optional: shows it first on the home page
 summary: One or two sentences.
