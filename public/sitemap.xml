@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.daivikbharat.in/</loc></url>
-  <url><loc>https://www.daivikbharat.in/explainers</loc></url>
-  <url><loc>https://www.daivikbharat.in/scriptures</loc></url>
-  <url><loc>https://www.daivikbharat.in/history</loc></url>
+  <url><loc>https://www.daivikbharat.in/read</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics</loc></url>
+  <url><loc>https://www.daivikbharat.in/texts</loc></url>
   <url><loc>https://www.daivikbharat.in/books</loc></url>
   <url><loc>https://www.daivikbharat.in/gallery</loc></url>
-  <url><loc>https://www.daivikbharat.in/event-in-context</loc></url>
   <url><loc>https://www.daivikbharat.in/about</loc></url>
   <url><loc>https://www.daivikbharat.in/contact</loc></url>
-  <url><loc>https://www.daivikbharat.in/explainers/india-that-is-bharat</loc></url>
-  <url><loc>https://www.daivikbharat.in/history/lord-jagannath-story</loc></url>
-  <url><loc>https://www.daivikbharat.in/history/shakti-peethas</loc></url>
-  <url><loc>https://www.daivikbharat.in/scriptures/hanuman-ashtakam</loc></url>
-  <url><loc>https://www.daivikbharat.in/scriptures/hanuman-chalisa</loc></url>
-  <url><loc>https://www.daivikbharat.in/scriptures/maha-laxmi-ashtakam</loc></url>
+  <url><loc>https://www.daivikbharat.in/read/india-that-is-bharat</loc></url>
+  <url><loc>https://www.daivikbharat.in/read/lord-jagannath-story</loc></url>
+  <url><loc>https://www.daivikbharat.in/read/shakti-peethas</loc></url>
+  <url><loc>https://www.daivikbharat.in/texts/hanuman-ashtakam</loc></url>
+  <url><loc>https://www.daivikbharat.in/texts/hanuman-chalisa</loc></url>
+  <url><loc>https://www.daivikbharat.in/texts/maha-laxmi-ashtakam</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/history</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/spiritual</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/geography</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/culture</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/geopolitics</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/polity</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/economy</loc></url>
+  <url><loc>https://www.daivikbharat.in/topics/science-tech</loc></url>
 </urlset>

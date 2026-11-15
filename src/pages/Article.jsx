@@ -5,29 +5,30 @@ import NotFound from "./NotFound";
 import { findArticle } from "../lib/content";
 import { images } from "../content/data/gallery";
 import { formatDate } from "../components/ArticleList";
-import { site } from "../content/data/site";
+import { site, formats, topicBySlug, toneFor } from "../content/data/site";
 
-const back = {
-  explainers: { to: "/explainers", label: "All explainers" },
-  history: { to: "/history", label: "All heritage stories" },
-};
-
-export default function Article({ section }) {
+export default function Article() {
   const { slug } = useParams();
-  const article = findArticle(section, slug);
+  const article = findArticle(slug);
   if (!article) return <NotFound />;
   const image = images[article.image];
 
   return (
     <article className="article">
-      <Seo title={article.title} description={article.summary} path={`${back[section].to}/${slug}`} />
+      <Seo title={article.title} description={article.summary} path={`/read/${slug}`} />
       <header className="wrap article__header">
-        <Link className="back-link" to={back[section].to}>{back[section].label}</Link>
-        <p className="article-row__kind">{article.kind}</p>
+        <Link className="back-link" to={`/read?format=${article.format}`}>{formats[article.format]?.plural}</Link>
         <h1>{article.title}</h1>
         <p className="article__summary">{article.summary}</p>
+        <ul className="tag-list" aria-label="Topics">
+          {article.topics.map((t) => (
+            <li key={t}>
+              <Link to={`/topics/${t}`} className={`tag tag--${topicBySlug(t)?.tone}`}>{topicBySlug(t)?.name}</Link>
+            </li>
+          ))}
+        </ul>
         <p className="meta">
-          {formatDate(article.date)}, {article.minutes} min read
+          {formatDate(article.date)}. {article.minutes} min read.
         </p>
       </header>
       {image ? (
@@ -37,15 +38,15 @@ export default function Article({ section }) {
         </figure>
       ) : (
         <div className="wrap article__figure">
-          <Cover glyph={article.glyph} tone={article.tone} size="banner" />
+          <Cover glyph={article.glyph} tone={toneFor(article)} size="banner" />
         </div>
       )}
       <div className="wrap">
-        <div className="prose" dangerouslySetInnerHTML={{ __html: article.html }} />
+        <div className={`prose prose--${article.format}`} dangerouslySetInnerHTML={{ __html: article.html }} />
         <aside className="article__note">
           <p>
-            Spotted a mistake or have a better source? <a href={`mailto:${site.email}?subject=${encodeURIComponent("Correction: " + article.title)}`}>Email us</a> or message us on{" "}
-            <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>, and we'll update this page.
+            Think we've missed a side, a source or a fact? <a href={`mailto:${site.email}?subject=${encodeURIComponent("Correction: " + article.title)}`}>Email us</a> or message us on{" "}
+            <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>. We read everything and correct the page in public.
           </p>
         </aside>
       </div>

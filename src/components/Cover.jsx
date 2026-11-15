@@ -1,5 +1,5 @@
-// Typographic cover: a Devanagari word on a tone from the site palette.
-export default function Cover({ glyph, tone = "maroon", image, alt = "", size = "md" }) {
+// Typographic cover: a word on a quiet tone. Used where we don't have our own photo.
+export default function Cover({ glyph, tone = "indigo", image, alt = "", size = "md" }) {
   if (image) {
     return (
       <div className={`cover cover--${size} cover--image`}>

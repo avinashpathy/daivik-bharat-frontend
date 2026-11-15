@@ -4,6 +4,6 @@
   "icons": [{ "src": "logo-db.png", "type": "image/png", "sizes": "347x347" }],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4a0d0d",
+  "theme_color": "#14213d",
   "background_color": "#ffffff"
 }

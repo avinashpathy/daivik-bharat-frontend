@@ -3,7 +3,7 @@ slug: hanuman-ashtakam
 title: श्री हनुमदष्टकम्
 titleEn: Shri Hanumad Ashtakam
 deity: हनुमान
-tone: maroon
+tone: plum
 attribution: Achyuta, disciple of Madhusudana Ashrama
 summary: Eight verses seeking refuge at the feet of Shri Hanuman, each ending with the same prayer for his grace.
 ---

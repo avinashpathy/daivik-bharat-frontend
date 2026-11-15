@@ -5,12 +5,12 @@ import { books } from "../content/data/books";
 export default function Books() {
   return (
     <div className="wrap page">
-      <Seo title="Books" path="/books" description="The texts we keep going back to, in editions we trust." />
+      <Seo title="Reading list" path="/books" description="Books we read while researching, with notes on each edition." />
       <header className="page-header">
-        <h1>Books</h1>
+        <h1>Reading list</h1>
         <p className="page-header__lede">
-          The texts we keep going back to. We like the Gita Press editions because they print the original alongside a translation, at a price
-          almost anyone can afford.
+          Books we have read or used as sources. So far these are classical Indian texts in Gita Press editions, which print the original
+          alongside a translation at a low price. We'll add history, politics and economics titles from a range of viewpoints as we read them.
         </p>
       </header>
       <ul className="book-list">

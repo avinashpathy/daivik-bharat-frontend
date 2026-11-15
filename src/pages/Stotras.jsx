@@ -5,15 +5,15 @@ import { stotras } from "../lib/content";
 export default function Stotras() {
   return (
     <div className="wrap page">
-      <Seo title="Stotras" path="/scriptures" description="Stotras and chalisas to read and recite, set in clear Devanagari." />
+      <Seo title="Texts" path="/texts" description="Primary texts in full: hymns, verses and documents, in clear type." />
       <header className="page-header">
-        <h1>Stotras</h1>
-        <p className="page-header__lede">Hymns to read and recite, set in large, clear Devanagari. Each page lets you make the text bigger.</p>
+        <h1>Texts</h1>
+        <p className="page-header__lede">Primary texts in full, so you can read the source itself and not just what someone says about it. We're starting with devotional hymns and will keep adding texts and documents, like the Constitution's Preamble.</p>
       </header>
       <ul className="stotra-index">
         {stotras.map((s) => (
           <li key={s.slug}>
-            <Link to={`/scriptures/${s.slug}`} className={`stotra-card tone-${s.tone}`}>
+            <Link to={`/texts/${s.slug}`} className={`stotra-card tone-${s.tone}`}>
               <span lang="hi" className="stotra-card__title">{s.title}</span>
               <span className="stotra-card__en">{s.titleEn}</span>
               <span className="stotra-card__summary">{s.summary}</span>

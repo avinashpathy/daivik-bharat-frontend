@@ -15,10 +15,10 @@ export default function Gallery() {
 
   return (
     <div className="wrap page">
-      <Seo title="Gallery" path="/gallery" description="Photos from temples we have visited." />
+      <Seo title="Photos" path="/gallery" description="Photos from places we have visited." />
       <header className="page-header">
-        <h1>Gallery</h1>
-        <p className="page-header__lede">Photos we took on our own temple visits. Tap a photo to see it full size.</p>
+        <h1>Photos</h1>
+        <p className="page-header__lede">Photos we took ourselves on our travels. Tap a photo to see it full size.</p>
       </header>
       {albums.map((album) => (
         <section key={album.slug} className="album" aria-labelledby={`album-${album.slug}`}>

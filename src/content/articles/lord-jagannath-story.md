@@ -1,15 +1,16 @@
 ---
 slug: lord-jagannath-story
-section: history
-kind: Heritage
+format: story
+topics: spiritual, culture
 title: The story of Lord Jagannath
 glyph: जगन्नाथ
-tone: saffron
 image: puri-2
 imageCaption: Shri Jagannath Temple, Puri. Photo by Daivik Bharat.
 date: 2025-01-05
-summary: How King Indradyumna searched for Neela Madhava, and how the wooden forms of Jagannath, Subhadra and Balabhadra came to Puri.
+summary: The origin story of the Jagannath Temple as it is traditionally told in Odisha, from King Indradyumna's search to the unfinished wooden deities.
 ---
+This is the origin story of the Jagannath Temple at Puri as it is traditionally told in Odisha and in temple literature. Versions differ in the details; this is the one we grew up hearing.
+
 King **Indradyumna** of Avanti was a great devotee of Lord Vishnu, and he longed to see the Lord with his own eyes. One day he was told that Vishnu was worshipped in his truest form as **Neela Madhava** somewhere in Odisha. The king at once sent his head priest, **Vidyapati**, to find him.
 
 After a long and tiring journey, Vidyapati reached Odisha. There he met the tribal chieftain **Vishvavasu**, who was secretly guarding Neela Madhava. Vidyapati begged to be shown the place of worship, but Vishvavasu refused. Vidyapati stayed on in the village, fell in love with Vishvavasu's daughter Lalitha, and in time married her. Soon after the wedding, he asked his wife to persuade her father to grant him a single glimpse of Neela Madhava.
